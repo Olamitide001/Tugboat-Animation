@@ -1,0 +1,58 @@
+
+/*	Animations - WebKit only
+------------------------------------------ */
+
+.boat {
+	-webkit-animation: rock-boat 3s ease-in-out infinite;
+}
+.boat::after {
+	-webkit-animation: steam 4s infinite;
+}
+body{
+	animation: island 30s ease-in infinite;
+}
+.mike{
+	animation: frog 10s ease-out forwards, frog-move 2s 2s infinite;
+}
+
+/*	Keyframes - WebKit only
+------------------------------------------ */
+
+@-webkit-keyframes rock-boat {
+	50%  { -webkit-transform: rotate(-5deg) translateY(-10px); }
+}
+
+@-webkit-keyframes steam {
+	60%  { opacity: 1.5;}
+	80%  { opacity: 0.5; }
+	100% { -webkit-transform: translate(-15%, -35%) rotateZ(10deg);}
+} 
+@keyframes island {
+	0%{
+		background-position: 100%  -460px;
+	}
+	100%{
+		background-position: -350% -460px;
+	}
+}
+@keyframes frog{
+	100%{
+		left:12%;}
+	}
+@keyframes frog-move{
+	50%{
+		transform: rotate(-5deg) translateY(-10px);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
